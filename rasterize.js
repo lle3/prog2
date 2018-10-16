@@ -171,8 +171,8 @@ function renderTriangles() {
     // mode: unsigned long specifies primitive to render
     // first: long that specifies starting index in array of vector points
     // count: long that specifies indices to be renderized
-    console.log("triBufferSize: "+triBufferSize);
-    gl.drawArrays(gl.TRIANGLES,0,triBufferSize); // render
+    console.log("triBufferSize7: "+triBufferSize);
+    gl.drawArrays(gl.TRIANGLES,0,7); // render
 } // end render triangles
 
 
