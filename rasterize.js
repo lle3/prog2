@@ -75,13 +75,12 @@ function loadTriangles() {
         var whichSetVert; // index of vertex in current triangle set
         var whichSetTri; // index of triangle in current triangle set
         var coordArray = []; // 1D array of vertex coords for WebGL
-        
+        console.log("inputTriangle" + inputTriangles.toString());
         for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
-            
             // set up the vertex coord array
             for (whichSetVert=0; whichSetVert<inputTriangles[whichSet].vertices.length; whichSetVert++){
                 coordArray = coordArray.concat(inputTriangles[whichSet].vertices[whichSetVert]);
-                console.log("inputTriangle" + inputTriangles[whichSet].vertices[whichSetVert]);
+//                 console.log("inputTriangle" + inputTriangles[whichSet].vertices[whichSetVert]);
             }
         } // end for each triangle set 
         console.log("coordArray" + coordArray.length);
@@ -172,6 +171,7 @@ function renderTriangles() {
     // first: long that specifies starting index in array of vector points
     // count: long that specifies indices to be renderized
     console.log("triBufferSize: "+triBufferSize);
+    
     gl.drawArrays(gl.TRIANGLES,0,triBufferSize); // render
 } // end render triangles
 
