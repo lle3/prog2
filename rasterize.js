@@ -158,7 +158,8 @@ function renderTriangles() {
     // vertex buffer: activate and feed into vertex shader
     gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate
     gl.vertexAttribPointer(vertexPositionAttrib,3,gl.FLOAT,false,0,0); // feed
-
+    var x = gl.TRIANGLES;
+    console.log("X: " + x);
     gl.drawArrays(gl.TRIANGLES,0,3); // render
 } // end render triangles
 
