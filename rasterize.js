@@ -75,7 +75,8 @@ function loadTriangles() {
         var whichSetVert; // index of vertex in current triangle set
         var whichSetTri; // index of triangle in current triangle set
         var coordArray = []; // 1D array of vertex coords for WebGL
-        console.log("inputTriangle" + inputTriangles.toString());
+        console.log("inputTriangle0" + inputTriangles[0].toString());
+        console.log("inputTriangle0" + inputTriangles[1].toString());
         for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
             // set up the vertex coord array
             for (whichSetVert=0; whichSetVert<inputTriangles[whichSet].vertices.length; whichSetVert++){
