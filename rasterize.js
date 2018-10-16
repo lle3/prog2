@@ -91,9 +91,10 @@ function loadTriangles() {
         // target: specifies binding point
         gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
         // gl.bufferData
+        // gl.STATIC_DRAW: Contents of the buffer are likely to be used often and not change often
         gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
      
-        console.log("RETURN: " + gl.getBufferParameter(gl.ARRAY_BUFFER, coordArray.length).toString());
+//         console.log("RETURN: " + gl.getBufferParameter(gl.ARRAY_BUFFER, coordArray.length).toString());
         
     } // end if triangles found
 } // end load triangles
@@ -169,8 +170,8 @@ function renderTriangles() {
     // mode: unsigned long specifies primitive to render
     // first: long that specifies starting index in array of vector points
     // count: long that specifies indices to be renderized
-    console.log("3");
-    gl.drawArrays(gl.TRIANGLES,0,3); // render
+    console.log("4");
+    gl.drawArrays(gl.TRIANGLES,0,4); // render
 } // end render triangles
 
 
