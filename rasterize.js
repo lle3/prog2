@@ -164,8 +164,8 @@ function renderTriangles() {
     // mode: unsigned long specifies primitive to render
     // first: long that specifies starting index in array of vector points
     // count: long that specifies indices to be renderized
-    console.log("9");
-    gl.drawArrays(gl.TRIANGLES,0,9); // render
+    console.log("3");
+    gl.drawArrays(gl.TRIANGLES,0,3); // render
 } // end render triangles
 
 
