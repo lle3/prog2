@@ -81,10 +81,10 @@ function loadTriangles() {
             // set up the vertex coord array
             for (whichSetVert=0; whichSetVert<inputTriangles[whichSet].vertices.length; whichSetVert++){
                 coordArray = coordArray.concat(inputTriangles[whichSet].vertices[whichSetVert]);
-                // console.log(inputTriangles[whichSet].vertices[whichSetVert]);
+                console.log("inputTriangle" + inputTriangles[whichSet].vertices[whichSetVert]);
             }
         } // end for each triangle set 
-        // console.log(coordArray.length);
+        console.log("coordArray" + coordArray.length);
         // send the vertex coords to webGL
         vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
         gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
