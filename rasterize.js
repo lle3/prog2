@@ -160,7 +160,11 @@ function renderTriangles() {
     gl.vertexAttribPointer(vertexPositionAttrib,3,gl.FLOAT,false,0,0); // feed
     var x = gl.TRIANGLES;
     console.log("X: " + x);
-    gl.drawArrays(gl.TRIANGLES,0,3); // render
+    // gl.drawArrays(mode, first, count);
+    // mode: unsigned long specifies primitive to render
+    // first: long that specifies starting index in array of vector points
+    // count: long that specifies indices to be renderized
+    gl.drawArrays(gl.TRIANGLES,0,9); // render
 } // end render triangles
 
 
