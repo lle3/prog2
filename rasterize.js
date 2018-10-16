@@ -87,8 +87,13 @@ function loadTriangles() {
         console.log("coordArray" + coordArray.length);
         // send the vertex coords to webGL
         vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
+        // gl.bindBuffer(target, buffer);
+        // target: specifies binding point
         gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
+        // gl.bufferData
         gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
+     
+        console.log("RETURN: " + gl.getBufferParamter(gl.ARRAY_BUFFER, coordArray.length));
         
     } // end if triangles found
 } // end load triangles
