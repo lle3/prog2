@@ -85,7 +85,7 @@ function loadTriangles() {
             }
         } // end for each triangle set 
         console.log("coordArray" + coordArray.length);
-        triBufferSize = coordArray.length;
+        triBufferSize = coordArray.length/3;
         // send the vertex coords to webGL
         vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
         // gl.bindBuffer(target, buffer);
@@ -171,8 +171,8 @@ function renderTriangles() {
     // mode: unsigned long specifies primitive to render
     // first: long that specifies starting index in array of vector points
     // count: long that specifies indices to be renderized
-    console.log("triBufferSize7: "+triBufferSize);
-    gl.drawArrays(gl.TRIANGLES,0,7); // render
+    console.log("triBufferSize: "+triBufferSize);
+    gl.drawArrays(gl.TRIANGLES,0,triBufferSize); // render
 } // end render triangles
 
 
