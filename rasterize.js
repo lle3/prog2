@@ -17,7 +17,7 @@ var vertexPositionAttrib; // where to put position for vertex shader
 
 
 // ASSIGNMENT HELPER FUNCTIONS
-
+ 
 // get the JSON file from the passed URL
 function getJSONFile(url,descr) {
     try {
