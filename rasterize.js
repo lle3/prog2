@@ -93,7 +93,7 @@ function loadTriangles() {
         // gl.bufferData
         gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
      
-        console.log("RETURN: " + gl.getBufferParamter(gl.ARRAY_BUFFER, coordArray.length));
+        console.log("RETURN: " + gl.getBufferParameter(gl.ARRAY_BUFFER, coordArray.length));
         
     } // end if triangles found
 } // end load triangles
